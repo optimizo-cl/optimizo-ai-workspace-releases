@@ -7,6 +7,8 @@ y te muestra «Nueva versión · Reiniciar» (si no reinicias, se instala al cer
 
 - **Mac (Apple Silicon):** [OptimizoAIWorkspace-mac-arm64.dmg](https://github.com/optimizo-cl/optimizo-ai-workspace-releases/releases/latest/download/OptimizoAIWorkspace-mac-arm64.dmg)
 - **Windows:** [OptimizoAIWorkspace-windows-x64.exe](https://github.com/optimizo-cl/optimizo-ai-workspace-releases/releases/latest/download/OptimizoAIWorkspace-windows-x64.exe)
+- **Linux (Ubuntu, Debian, Mint, Pop!_OS…):** [OptimizoAIWorkspace-linux-amd64.deb](https://github.com/optimizo-cl/optimizo-ai-workspace-releases/releases/latest/download/OptimizoAIWorkspace-linux-amd64.deb)
+- **Linux (cualquier distro):** [OptimizoAIWorkspace-linux-x86_64.AppImage](https://github.com/optimizo-cl/optimizo-ai-workspace-releases/releases/latest/download/OptimizoAIWorkspace-linux-x86_64.AppImage)
 
 ## Instalar (solo la primera vez)
 
@@ -16,6 +18,13 @@ actualizaciones llegan solas.
 
 **Windows:** abre el instalador. Si aparece «Windows protegió tu PC», haz clic en **Más información → Ejecutar de
 todas formas**.
+
+**Linux (.deb):** `sudo apt install ./OptimizoAIWorkspace-linux-amd64.deb` y ábrela desde el menú de aplicaciones.
+Para actualizar, baja el `.deb` de nuevo e instálalo igual.
+
+**Linux (AppImage):** `chmod +x OptimizoAIWorkspace-linux-x86_64.AppImage` y ábrela. Esta se actualiza sola.
+Si no abre en Ubuntu 24.04 o más nuevo (error de *sandbox*), usa el `.deb`, o ábrela con `--no-sandbox`.
+En distros que no traen FUSE 2: `sudo apt install libfuse2` (o `libfuse2t64`).
 
 Para las consolas de agentes necesitas [Claude Code](https://claude.com/claude-code) instalado.
 
@@ -34,7 +43,7 @@ las que trabajan. Todo es local: nada sale de tu equipo.
 - **Moverse:** rueda o pellizco = zoom; arrastrar el fondo = moverse; `⌘/Ctrl 0` = ver todo.
 
 ### Hablarle al agente
-- **Dictar:** 🎙 en la consola o `⌥ Espacio` (Mac) / `Ctrl Espacio` (Windows). El texto queda escrito, sin enviar.
+- **Dictar:** 🎙 en la consola o `⌥ Espacio` (Mac) / `Ctrl Espacio` (Windows). El texto queda escrito, sin enviar (En Linux todavía no hay dictado.)
 - **Anotar una web:** 💬 en la web → clic en elementos o arrastra zonas y escribe qué cambiar → *Enviar N*.
 - **Comentar el código:** tarjeta Git (menú del grupo) → abre un archivo → clic en una línea → *Mandar al agente*.
 - **Capturas:** `⌘/Ctrl B` abre *A mano*: tus capturas de pantalla aparecen solas; arrástralas a una consola o
@@ -44,5 +53,6 @@ las que trabajan. Todo es local: nada sale de tu equipo.
 - Arriba: uso de Claude (ventana de 5 h y semana), servidores locales escuchando (abrir o detener) y memoria.
 - `⌘/Ctrl ⇧ F` busca en el historial de todas las consolas.
 - Menú del grupo: color, ordenar, comandos guardados (`npm run dev`, tests…), difundir a todas sus consolas.
-- Web: *Capturar en todos los dispositivos* (chip del dispositivo) → 5 capturas en *A mano*.
+- Web: el chip del dispositivo cambia entre celular, tablet y escritorio. Si la web queda angosta, lo que no cabe
+  en su barra pasa a **⋯**. *Capturar en todos los dispositivos* (mismo chip) → 5 capturas en *A mano*.
 - Todos los atajos: Herramientas → *Atajos de teclado*.
